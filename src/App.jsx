@@ -664,9 +664,9 @@ function removeQueueTrack(index) {
   }
 
   return (
-    <div className="h-screen bg-black text-white p-2 flex flex-col gap-2 overflow-hidden">
+    <div className="h-[100dvh] bg-black text-white p-2 flex flex-col gap-2 overflow-hidden">
 
-      <div className="flex flex-1 min-h-0 gap-2 overflow-hidden">
+      <div className="flex flex-1 min-h-0 flex-col md:flex-row gap-2 overflow-hidden">
 
         {/* SIDEBAR */}
 
@@ -678,7 +678,7 @@ function removeQueueTrack(index) {
 
         {/* MAIN CONTENT */}
 
-        <main className="flex-1 min-w-0 min-h-0 bg-[#121212] rounded-lg p-5 md:p-6 overflow-y-auto">
+        <main className="flex-1 min-w-0 min-h-0 bg-[#121212] rounded-lg p-4 md:p-6 pb-32 md:pb-6 overflow-y-auto">
 
           {/* CREATE PLAYLIST FORM */}
 
@@ -1723,9 +1723,7 @@ function removeQueueTrack(index) {
         onPlayQueueTrack={playQueueTrack}
         onRemoveQueueTrack={removeQueueTrack}
       />
-
     </div>
   )
 }
-
 export default App

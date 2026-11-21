@@ -550,16 +550,16 @@ export default function Player({
       )}
 
       {/* COMPACT BOTTOM PLAYER */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#181818] border-t border-white/10 px-4 py-3 text-white">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#181818] border-t border-white/10 px-3 py-3 pb-[calc(12px+env(safe-area-inset-bottom))] text-white">
 
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto flex flex-wrap md:flex-nowrap items-center justify-between gap-x-3 gap-y-2">
 
           {/* Track Information */}
-          <div className="flex items-center gap-3 min-w-0 w-1/3">
+          <div className="flex items-center gap-2 min-w-0 w-[calc(100%-90px)] md:w-1/3">
             <img
               src={track.image}
               alt={track.title}
-              className="w-12 h-12 rounded object-cover"
+              className="w-10 h-10 md:w-12 md:h-12 shrink-0 rounded object-cover"
             />
 
             <div className="min-w-0">
@@ -585,7 +585,7 @@ export default function Player({
           </div>
 
           {/* Playback Controls */}
-          <div className="flex flex-col items-center flex-1 max-w-xl">
+          <div className="flex flex-col items-center w-full md:w-auto md:flex-1 md:max-w-xl order-2 md:order-none">
 
             <div className="flex items-center gap-5 mb-2">
               <button
@@ -636,7 +636,7 @@ export default function Player({
           </div>
 
           {/* Volume and Expand */}
-          <div className="flex items-center justify-end gap-3 w-1/3">
+          <div className="flex items-center justify-end gap-3 w-[76px] md:w-1/3">
             <button
               onClick={toggleMute}
               className="text-gray-400 hover:text-white"
